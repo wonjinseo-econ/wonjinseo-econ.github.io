@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wonjin Seo — M.A. student in Economics at Yonsei University">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Wonjin Seo — Economics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="site-shell">
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Economics · Yonsei University</p>
+          <h1 id="page-title">Wonjin Seo</h1>
+          <p class="introduction">
+            I am an M.A. student in Economics at Yonsei University.
+          </p>
+          <p class="hero-links">
+            <a href="files/CV.pdf">CV</a>
+            <span class="divider" aria-hidden="true">|</span>
+            <a href="mailto:nwonjin@yonsei.ac.kr">Email</a>
+          </p>
+        </div>
+
+        <figure class="profile-photo">
+          <img src="files/wonjin.jpg" alt="Wonjin Seo">
+        </figure>
+
+        <p class="interests">
+          <span>Research interests</span>
+          Industrial Organization, International Trade, Digital Economics, and Structural Econometrics.
+        </p>
+      </section>
+
+      <section class="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <h2 id="research-title">Research</h2>
+        </div>
+
+        <div class="research-group">
+          <h3>Working papers</h3>
+
+          <article class="research-item">
+            <div class="paper-body">
+              <h4>How Does Trade Competition with a Technological Leader Reshape Domestic Innovation? Evidence from South Korea</h4>
+              <p class="paper-meta">Sole-authored <span aria-hidden="true">·</span> Draft</p>
+              <div class="paper-actions">
+                <details>
+                  <summary>Abstract</summary>
+                  <p>
+                    I study how import competition from a technological leader affects both the level
+                    and direction of innovation in a catching-up economy. I exploit South Korea’s
+                    abolition of product-specific restrictions on Japanese imports, which sharply
+                    increased imports from Japan but not from elsewhere. Korean patenting fell sharply
+                    in exposed technologies and did so before production declined, consistent with an
+                    anticipatory adjustment to lower expected returns. I construct a bilateral
+                    technology-gap measure from pre-reform Japanese and Korean patenting and show that
+                    the decline was larger where Japan’s initial technological advantage was greater.
+                    An exact decomposition shows that most of the response reflected portfolio
+                    reallocation. Large, diversified incumbents shifted patenting toward established
+                    fields while maintaining their overall patenting, whereas smaller firms contracted
+                    more broadly. Trade liberalization can therefore induce selective technological
+                    retreat without an equally large decline in incumbents’ overall patenting.
+                  </p>
+                </details>
+                <a href="files/How_Does_Trade_Competition_with_a_Technological_Leader_Reshape_Domestic_Innovation.pdf">Read paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="paper-body">
+              <h4>From Ad Avoidance to Ad Acceptance: Sponsored Listings and Consumer Inference</h4>
+              <p class="paper-meta">Sole-authored <span aria-hidden="true">·</span> Draft</p>
+              <div class="paper-actions">
+                <details>
+                  <summary>Abstract</summary>
+                  <p>
+                    This paper develops a theory in which sellers use paid placement to bypass an
+                    informative organic-ranking algorithm. Consumers interpret a sponsored label
+                    relative to the credibility of the organic ranking, so sponsorship is bad news
+                    when organic visibility is reliable but can become good news when the algorithm
+                    is noisy. The model also shows how sponsorship revenue can give platforms an
+                    incentive to reduce organic-search quality.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="research-group research-group-secondary">
+          <h3>Work in progress</h3>
+
+          <article class="research-item">
+            <div class="paper-body">
+              <h4>The Production of Artificial Intelligence: Evidence from Korean AI Firms</h4>
+              <p class="paper-meta">with Paul S. Koh and Devesh Raval</p>
+              <div class="paper-actions">
+                <details>
+                  <summary>Summary</summary>
+                  <p>
+                    Uses linked firm-level microdata from the Korean Artificial Intelligence Industry
+                    Survey to study how labor, R&amp;D, knowledge stock, computing resources, and cloud
+                    use shape AI production and productivity.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="paper-body">
+              <h4>Identification and Estimation of Discrete Choice Models with a Fixed Latent Information Structure</h4>
+              <p class="paper-meta">with Paul S. Koh</p>
+              <div class="paper-actions">
+                <details>
+                  <summary>Summary</summary>
+                  <p>
+                    Studies identification and estimation in single-agent and multi-agent discrete
+                    choice models when the information structure is unknown but fixed across markets.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year">2026</span> Wonjin Seo</p>
+      <p class="footer-meta">
+        <span>Seoul, South Korea</span>
+        <span id="update-note" hidden> · Updated <time id="last-updated"></time></span>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    async function showLastUpdated() {
+      const dates = [new Date(document.lastModified)];
+
+      if (window.location.protocol !== "file:") {
+        const resources = ["index.html", "styles.css"];
+        const results = await Promise.allSettled(
+          resources.map(async (resource) => {
+            const response = await fetch(resource, { method: "HEAD", cache: "no-store" });
+            const modified = response.headers.get("last-modified");
+            return modified ? new Date(modified) : null;
+          })
+        );
+
+        results.forEach((result) => {
+          if (result.status === "fulfilled" && result.value) dates.push(result.value);
+        });
+      }
+
+      const latest = dates
+        .filter((date) => !Number.isNaN(date.getTime()))
+        .sort((a, b) => b - a)[0];
+
+      if (!latest) return;
+
+      const time = document.getElementById("last-updated");
+      time.dateTime = latest.toISOString();
+      time.textContent = new Intl.DateTimeFormat("en", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      }).format(latest);
+      document.getElementById("update-note").hidden = false;
+    }
+
+    showLastUpdated();
+  </script>
+</body>
+</html>
