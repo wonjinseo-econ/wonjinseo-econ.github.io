@@ -51,7 +51,7 @@
               <h4>How Does Trade Competition with a Technological Leader Reshape Domestic Innovation? Evidence from South Korea</h4>
               <p class="paper-meta">Sole-authored <span aria-hidden="true">·</span> Draft</p>
               <div class="paper-actions">
-                <details>
+                <details data-event="open-abstract-trade-innovation">
                   <summary>Abstract</summary>
                   <p>
                     I study how import competition from a technological leader affects both the level
@@ -79,7 +79,7 @@
               <h4>From Ad Avoidance to Ad Acceptance: Sponsored Listings and Consumer Inference</h4>
               <p class="paper-meta">Sole-authored <span aria-hidden="true">·</span> Draft</p>
               <div class="paper-actions">
-                <details>
+                <details data-event="open-abstract-sponsored-listings">
                   <summary>Abstract</summary>
                   <p>
                     Whether consumers avoid or accept sponsored listings depends on what sponsorship
@@ -112,7 +112,7 @@
               <h4>The Production of Artificial Intelligence: Evidence from Korean AI Firms</h4>
               <p class="paper-meta">with Paul S. Koh and Devesh Raval</p>
               <div class="paper-actions">
-                <details>
+                <details data-event="open-summary-ai-production">
                   <summary>Summary</summary>
                   <p>
                     Uses linked firm-level microdata from the Korean Artificial Intelligence Industry
@@ -129,7 +129,7 @@
               <h4>Identification and Estimation of Discrete Choice Models with a Fixed Latent Information Structure</h4>
               <p class="paper-meta">with Paul S. Koh</p>
               <div class="paper-actions">
-                <details>
+                <details data-event="open-summary-latent-information">
                   <summary>Summary</summary>
                   <p>
                     Studies identification and estimation in single-agent and multi-agent discrete
@@ -190,6 +190,14 @@
     }
 
     showLastUpdated();
+
+    document.querySelectorAll("details[data-event]").forEach((detailsEl) => {
+      detailsEl.addEventListener("toggle", () => {
+        if (detailsEl.open && window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: detailsEl.dataset.event, event: true });
+        }
+      });
+    });
   </script>
 
   <script data-goatcounter="https://wonjinseo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
