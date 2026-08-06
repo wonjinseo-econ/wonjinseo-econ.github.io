@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="342d10a3-9811-48a8-b3c7-f4e8ccb9dfdb"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
             My research spans industrial organization, international trade, and econometrics.
           </p>
           <p class="hero-links">
-            <a href="files/CV.pdf" data-goatcounter-click="download-cv" data-goatcounter-title="CV download">CV</a>
+            <a href="files/CV.pdf" data-umami-event="download-cv">CV</a>
             <span class="divider" aria-hidden="true">|</span>
-            <a href="mailto:nwonjin@yonsei.ac.kr" data-goatcounter-click="click-email" data-goatcounter-title="Email click">Email</a>
+            <a href="mailto:nwonjin@yonsei.ac.kr" data-umami-event="click-email">Email</a>
           </p>
         </div>
 
@@ -69,7 +70,7 @@
                     an equally large decline in incumbents’ overall patenting.
                   </p>
                 </details>
-                <a href="files/How_Does_Trade_Competition_with_a_Technological_Leader_Reshape_Domestic_Innovation.pdf" data-goatcounter-click="download-paper-trade-innovation" data-goatcounter-title="Trade-innovation paper download">Read paper <span aria-hidden="true">↗</span></a>
+                <a href="files/How_Does_Trade_Competition_with_a_Technological_Leader_Reshape_Domestic_Innovation.pdf" data-umami-event="download-paper-trade-innovation">Read paper <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
@@ -193,13 +194,11 @@
 
     document.querySelectorAll("details[data-event]").forEach((detailsEl) => {
       detailsEl.addEventListener("toggle", () => {
-        if (detailsEl.open && window.goatcounter && window.goatcounter.count) {
-          window.goatcounter.count({ path: detailsEl.dataset.event, event: true });
+        if (detailsEl.open && window.umami) {
+          window.umami.track(detailsEl.dataset.event);
         }
       });
     });
   </script>
-
-  <script data-goatcounter="https://wonjinseo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
