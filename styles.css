@@ -120,7 +120,7 @@ h1 {
   max-width: 750px;
   margin: 0;
   color: #343a35;
-  font-size: clamp(1.12rem, 2.1vw, 1.3rem);
+  font-size: clamp(0.87rem, 1.63vw, 1.01rem);
   line-height: 1.58;
 }
 
@@ -144,23 +144,6 @@ h1 {
 
 .hero-links .divider {
   color: var(--line);
-}
-
-.interests {
-  grid-column: 1 / -1;
-  margin: 44px 0 0;
-  color: var(--muted);
-  font-size: 1.04rem;
-}
-
-.interests span {
-  margin-right: 12px;
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
 }
 
 .research {
@@ -328,15 +311,6 @@ footer p {
 
   h1 {
     font-size: clamp(2.6rem, 12.6vw, 3.4rem);
-  }
-
-  .interests {
-    margin-top: 0;
-  }
-
-  .interests span {
-    display: block;
-    margin: 0 0 5px;
   }
 
   .research {
