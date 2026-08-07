@@ -1,6 +1,5 @@
-# LaTeX build artifacts (the canonical output is files/CV.pdf)
+# LaTeX build artifacts (files/CV/CV.pdf itself is tracked and served)
 files/CV/*.aux
 files/CV/*.log
 files/CV/*.out
 files/CV/*.synctex.gz
-files/CV/Wonjin_Seo_CV_Overleaf.pdf
