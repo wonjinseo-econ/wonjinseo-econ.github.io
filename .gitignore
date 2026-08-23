@@ -1,5 +1,4 @@
-# LaTeX build artifacts (files/CV/CV.pdf itself is tracked and served)
-files/CV/*.aux
-files/CV/*.log
-files/CV/*.out
-files/CV/*.synctex.gz
+# Local-only tooling; never published. The CV source, build scripts and repo
+# notes live outside this repository, in ../private/.
+.claude/
+_site/
