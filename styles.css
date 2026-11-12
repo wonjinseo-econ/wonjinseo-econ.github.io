@@ -158,12 +158,12 @@ h1 {
 }
 
 .copied-note.is-visible {
-  animation: copied-fade 1.25s ease forwards;
+  animation: copied-fade 1.05s ease forwards;
 }
 
 @keyframes copied-fade {
   0%,
-  40% {
+  28.6% {
     opacity: 1;
   }
   100% {
