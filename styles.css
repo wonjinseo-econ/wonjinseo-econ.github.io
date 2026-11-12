@@ -162,21 +162,12 @@ h1 {
 }
 
 @keyframes copied-fade {
-  0% {
-    opacity: 0;
-    transform: translateX(-4px);
-  }
-  12% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  0%,
   45% {
     opacity: 1;
-    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    transform: translateX(0);
   }
 }
 
