@@ -147,7 +147,7 @@ h1 {
 }
 
 .copied-note {
-  margin-left: 0;
+  margin-left: 2px;
   color: #a3a8a4;
   font-size: 0.86rem;
   font-weight: 400;
@@ -158,12 +158,12 @@ h1 {
 }
 
 .copied-note.is-visible {
-  animation: copied-fade 1.96s ease forwards;
+  animation: copied-fade 1.71s ease forwards;
 }
 
 @keyframes copied-fade {
   0%,
-  38.3% {
+  29.2% {
     opacity: 1;
   }
   100% {
