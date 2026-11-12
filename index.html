@@ -58,7 +58,8 @@
           <p class="hero-links">
             <a href="files/CV/CV.pdf" data-umami-event="download-cv">CV</a>
             <span class="divider" aria-hidden="true">|</span>
-            <a href="mailto:wonjinspace@gmail.com" data-umami-event="click-email">Email</a>
+            <a href="mailto:wonjinspace@gmail.com" id="copy-email" data-umami-event="click-email">Email</a>
+            <span class="copied-note" id="copied-note" role="status" aria-live="polite"></span>
           </p>
         </div>
 
@@ -243,6 +244,47 @@
     }
 
     showLastUpdated();
+
+    // Email link: copy the address instead of opening a mail client, and flash "copied".
+    const emailLink = document.getElementById("copy-email");
+    const copiedNote = document.getElementById("copied-note");
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      const ok = document.execCommand("copy");
+      field.remove();
+      if (!ok) throw new Error("copy failed");
+    }
+
+    emailLink.addEventListener("click", async (event) => {
+      event.preventDefault();
+      const address = emailLink.getAttribute("href").replace(/^mailto:/, "");
+      try {
+        await copyText(address);
+      } catch (error) {
+        window.location.href = emailLink.href;
+        return;
+      }
+      copiedNote.textContent = "copied";
+      copiedNote.classList.remove("is-visible");
+      void copiedNote.offsetWidth;
+      copiedNote.classList.add("is-visible");
+    });
+
+    copiedNote.addEventListener("animationend", () => {
+      copiedNote.classList.remove("is-visible");
+      copiedNote.textContent = "";
+    });
 
     document.querySelectorAll("details[data-event]").forEach((detailsEl) => {
       detailsEl.addEventListener("toggle", () => {

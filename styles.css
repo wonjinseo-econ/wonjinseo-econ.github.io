@@ -146,6 +146,40 @@ h1 {
   color: var(--line);
 }
 
+.copied-note {
+  margin-left: -4px;
+  color: #a3a8a4;
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.copied-note.is-visible {
+  animation: copied-fade 2.2s ease forwards;
+}
+
+@keyframes copied-fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  12% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
 .research {
   padding: 0 0 82px;
 }
