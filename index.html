@@ -58,7 +58,7 @@
           <p class="hero-links">
             <a href="files/CV/CV.pdf" data-umami-event="download-cv">CV</a>
             <span class="divider" aria-hidden="true">|</span>
-            <a href="mailto:wonjinspace@gmail.com" id="copy-email" data-umami-event="click-email">Email</a>
+            <a href="#" role="button" id="copy-email" data-email="wonjinspace@gmail.com" data-umami-event="click-email">Email</a>
             <span class="copied-note" id="copied-note" role="status" aria-live="polite"></span>
           </p>
         </div>
@@ -245,7 +245,7 @@
 
     showLastUpdated();
 
-    // Email link: copy the address instead of opening a mail client, and flash "copied".
+    // Email button: copy the address (no mail link, so no mail-app prompt) and flash "copied".
     const emailLink = document.getElementById("copy-email");
     const copiedNote = document.getElementById("copied-note");
 
@@ -268,14 +268,15 @@
 
     emailLink.addEventListener("click", async (event) => {
       event.preventDefault();
-      const address = emailLink.getAttribute("href").replace(/^mailto:/, "");
+      const address = emailLink.dataset.email;
+      let label = "copied";
       try {
         await copyText(address);
       } catch (error) {
-        window.location.href = emailLink.href;
-        return;
+        // Never hand off to a mail app; show the address so it can be copied by hand.
+        label = address;
       }
-      copiedNote.textContent = "copied";
+      copiedNote.textContent = label;
       copiedNote.classList.remove("is-visible");
       void copiedNote.offsetWidth;
       copiedNote.classList.add("is-visible");
