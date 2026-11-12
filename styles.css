@@ -69,7 +69,7 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 234px;
+  grid-template-columns: minmax(0, 1fr) 269px;
   column-gap: clamp(42px, 8vw, 78px);
   row-gap: 0;
   align-items: center;
@@ -79,7 +79,7 @@ a:hover {
 .profile-photo {
   position: relative;
   transform: translateX(-21px);
-  width: 234px;
+  width: 269px;
   aspect-ratio: 1;
   margin: 0;
   overflow: hidden;
@@ -302,7 +302,7 @@ footer p {
   .profile-photo {
     grid-row: 1;
     transform: none;
-    width: 174px;
+    width: 200px;
   }
 
   .hero-copy {
