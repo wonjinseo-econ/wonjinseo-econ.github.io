@@ -28,7 +28,7 @@ jobs:
       - name: Stage the files the site serves
         run: |
           mkdir -p _site/files/CV
-          cp index.html styles.css robots.txt sitemap.xml google5691fe2aaf6adc32.html _site/
+          cp index.html styles.css robots.txt sitemap.xml google5691fe2aaf6adc32.html 91887649597bc5afc4bddf938a4b2ab1.txt _site/
           cp files/wonjin.jpg files/*.pdf _site/files/
           cp files/CV/CV.pdf _site/files/CV/
           echo "--- staged ---"
