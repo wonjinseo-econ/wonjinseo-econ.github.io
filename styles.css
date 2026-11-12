@@ -78,7 +78,7 @@ a:hover {
 
 .profile-photo {
   position: relative;
-  transform: translateX(-11px);
+  transform: translateX(-9px);
   width: 269px;
   aspect-ratio: 1;
   margin: 0;
