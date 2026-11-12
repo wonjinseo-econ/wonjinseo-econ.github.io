@@ -92,10 +92,10 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 196%;
+  width: 191.7%;
   max-width: none;
   height: auto;
-  transform: translate(-49%, -60%);
+  transform: translate(-49%, -61.5%);
 }
 
 .eyebrow {
