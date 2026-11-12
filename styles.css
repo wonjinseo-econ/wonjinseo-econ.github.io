@@ -147,7 +147,7 @@ h1 {
 }
 
 .copied-note {
-  margin-left: -4px;
+  margin-left: 0;
   color: #a3a8a4;
   font-size: 0.86rem;
   font-weight: 400;
