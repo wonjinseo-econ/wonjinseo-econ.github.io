@@ -102,7 +102,7 @@ a:hover {
   margin: 0;
   color: var(--accent);
   font-family: var(--sans);
-  font-size: 0.66rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -120,7 +120,7 @@ h1 {
   max-width: 750px;
   margin: 0;
   color: #343a35;
-  font-size: clamp(0.87rem, 1.63vw, 1.01rem);
+  font-size: clamp(1rem, 1.9vw, 1.12rem);
   line-height: 1.58;
 }
 
@@ -149,7 +149,7 @@ h1 {
 .copied-note {
   margin-left: 2px;
   color: #a3a8a4;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -224,7 +224,7 @@ h4 {
 .paper-meta {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.94rem;
   font-style: italic;
 }
 
@@ -244,7 +244,7 @@ h4 {
   align-items: flex-start;
   margin-top: 14px;
   font-family: var(--sans);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -291,7 +291,7 @@ details p {
   border-top: 1px solid var(--line);
   color: #505651;
   font-family: var(--serif);
-  font-size: 0.92rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.68;
 }
@@ -304,7 +304,7 @@ footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.64rem;
+  font-size: 0.8rem;
   letter-spacing: 0.055em;
   text-transform: uppercase;
 }
