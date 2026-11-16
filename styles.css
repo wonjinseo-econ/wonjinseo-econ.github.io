@@ -277,7 +277,6 @@ h2 {
 }
 
 h4 {
-  max-width: 800px;
   margin: 0;
   font-size: clamp(1.22rem, 2.25vw, 1.4205rem);
   font-weight: 600;
@@ -409,6 +408,10 @@ footer p {
 
   .hero-copy {
     grid-row: 2;
+  }
+
+  .title-break {
+    display: none;
   }
 
   h1 {
