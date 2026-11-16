@@ -111,7 +111,7 @@ h1 {
   max-width: 750px;
   margin: 0;
   color: #262b27;
-  font-size: clamp(1rem, 1.9vw, 1.195rem);
+  font-size: clamp(1rem, 1.9vw, 1.108rem);
   line-height: 1.58;
 }
 
