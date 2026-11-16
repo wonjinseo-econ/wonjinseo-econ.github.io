@@ -296,7 +296,7 @@ h4 {
 .paper-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 20px;
+  gap: 10px 14px;
   align-items: flex-start;
   margin-top: 14px;
   font-family: var(--sans);
