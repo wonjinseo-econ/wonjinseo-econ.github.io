@@ -162,17 +162,6 @@ h1 {
   }
 }
 
-/* On screens tall enough, the hero and the Research tab bar stay put and only the
-   list below them scrolls. Short or narrow screens keep normal scrolling. */
-@media (min-width: 621px) and (min-height: 700px) {
-  .masthead {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    background: var(--paper);
-  }
-}
-
 .research {
   padding: 0 0 82px;
 }
