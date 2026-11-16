@@ -289,6 +289,19 @@ h4 {
   font-style: normal;
 }
 
+.paper-meta a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.paper-meta a:hover,
+.paper-meta a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+}
+
 .paper-meta cite {
   font-style: normal;
 }
