@@ -18,6 +18,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* On desktop, render at 80% of the design size (what the page looked like at
+   80% browser zoom). Phones keep the full size. */
+@media (min-width: 900px) {
+  html {
+    zoom: 0.8;
+  }
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -379,9 +387,6 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-#update-note {
   opacity: 0.72;
 }
 
