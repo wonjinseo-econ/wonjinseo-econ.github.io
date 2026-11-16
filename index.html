@@ -81,7 +81,12 @@
           <h2 id="research-title">Research</h2>
         </div>
 
-        <div class="research-group">
+        <div class="research-tabs" role="tablist" aria-label="Research" hidden>
+          <button type="button" class="research-tab" role="tab" id="tab-working-papers" aria-controls="panel-working-papers" aria-selected="true" data-umami-event="tab-working-papers">Working papers</button>
+          <button type="button" class="research-tab" role="tab" id="tab-work-in-progress" aria-controls="panel-work-in-progress" aria-selected="false" tabindex="-1" data-umami-event="tab-work-in-progress">Work in progress</button>
+        </div>
+
+        <div class="research-group" id="panel-working-papers">
           <h3>Working papers</h3>
 
           <article class="research-item">
@@ -138,7 +143,7 @@
           </article>
         </div>
 
-        <div class="research-group research-group-secondary">
+        <div class="research-group research-group-secondary" id="panel-work-in-progress">
           <h3>Work in progress</h3>
 
           <article class="research-item">
@@ -291,6 +296,37 @@
       copiedNote.classList.remove("is-visible");
       copiedNote.textContent = "";
     });
+
+    // Research tabs. Without JavaScript both groups simply show one after the other.
+    const tabList = document.querySelector(".research-tabs");
+    const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+
+    function selectTab(selected, focus) {
+      tabs.forEach((tab) => {
+        const isSelected = tab === selected;
+        tab.setAttribute("aria-selected", String(isSelected));
+        tab.tabIndex = isSelected ? 0 : -1;
+        document.getElementById(tab.getAttribute("aria-controls")).hidden = !isSelected;
+      });
+      if (focus) selected.focus();
+    }
+
+    tabs.forEach((tab, index) => {
+      const panel = document.getElementById(tab.getAttribute("aria-controls"));
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", tab.id);
+      tab.addEventListener("click", () => selectTab(tab, false));
+      tab.addEventListener("keydown", (event) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+        if (!step) return;
+        event.preventDefault();
+        selectTab(tabs[(index + step + tabs.length) % tabs.length], true);
+      });
+    });
+
+    tabList.hidden = false;
+    tabList.closest(".research").classList.add("has-tabs");
+    selectTab(tabs[0], false);
 
     document.querySelectorAll("details[data-event]").forEach((detailsEl) => {
       detailsEl.addEventListener("toggle", () => {
