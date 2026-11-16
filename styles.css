@@ -163,7 +163,7 @@ h1 {
 }
 
 .research {
-  padding: 0 0 82px;
+  padding: 0;
 }
 
 .section-heading {
@@ -370,7 +370,6 @@ footer {
   justify-content: space-between;
   gap: 24px;
   padding: 24px 0 36px;
-  border-top: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.8rem;
@@ -409,10 +408,6 @@ footer p {
 
   h1 {
     font-size: clamp(2.6rem, 12.6vw, 3.4rem);
-  }
-
-  .research {
-    padding: 0 0 64px;
   }
 
   .section-heading {
