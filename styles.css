@@ -194,31 +194,38 @@ h2 {
   text-transform: uppercase;
 }
 
-.research-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 34px;
-  margin: 0 0 4px;
-  border-bottom: 1px solid var(--line);
-}
-
 .research-tabs[hidden] {
   display: none;
 }
 
+/* Tabs sit on the Research rule; the active tab's underline overlaps it. */
+.has-tabs .section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px 32px;
+  margin-bottom: 6px;
+}
+
+.research-tabs {
+  display: flex;
+  gap: 0 30px;
+  margin: 0 0 -19px;
+}
+
 .research-tab {
-  margin: 0 0 -1px;
-  padding: 0 0 12px;
+  padding: 0 0 15px;
   border: 0;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   background: none;
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.2;
   cursor: pointer;
+  transition: color 0.15s ease;
 }
 
 .research-tab:hover {
@@ -228,10 +235,6 @@ h2 {
 .research-tab[aria-selected="true"] {
   border-bottom-color: var(--accent);
   color: var(--ink);
-}
-
-.has-tabs .section-heading {
-  margin-bottom: 34px;
 }
 
 .has-tabs .research-group[hidden] {
@@ -408,11 +411,11 @@ footer p {
   }
 
   .research-tabs {
-    gap: 6px 16px;
+    gap: 0 22px;
   }
 
   .research-tab {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   footer {
