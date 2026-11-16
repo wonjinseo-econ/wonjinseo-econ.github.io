@@ -74,7 +74,7 @@ a:hover {
   column-gap: clamp(40px, 5vw, 56px);
   row-gap: 0;
   align-items: center;
-  padding: clamp(72px, 10vw, 106px) 0 clamp(70px, 9vw, 94px);
+  padding: clamp(44px, 6vw, 64px) 0 clamp(70px, 9vw, 94px);
 }
 
 .profile-photo {
@@ -397,7 +397,7 @@ footer p {
   .hero {
     grid-template-columns: 1fr;
     gap: 34px;
-    padding: 58px 0 62px;
+    padding: 36px 0 62px;
   }
 
   .profile-photo {
