@@ -120,7 +120,7 @@ h1 {
   align-items: center;
   margin: 45px 0 0;
   font-family: var(--sans);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -214,7 +214,7 @@ h4 {
 .paper-meta {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.06rem;
   font-style: italic;
 }
 
@@ -234,7 +234,7 @@ h4 {
   align-items: flex-start;
   margin-top: 14px;
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 600;
 }
 
