@@ -98,16 +98,6 @@ a:hover {
   transform: translate(-49%, -60.6%);
 }
 
-.eyebrow {
-  margin: 0;
-  color: var(--accent);
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 h1 {
   margin: 14px 0 24px;
   font-size: clamp(2.6rem, 5.4vw, 3.8rem);
@@ -130,7 +120,7 @@ h1 {
   align-items: center;
   margin: 45px 0 0;
   font-family: var(--sans);
-  font-size: 1.01rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -224,7 +214,7 @@ h4 {
 .paper-meta {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
@@ -244,7 +234,7 @@ h4 {
   align-items: flex-start;
   margin-top: 14px;
   font-family: var(--sans);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
