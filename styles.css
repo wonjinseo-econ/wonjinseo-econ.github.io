@@ -61,7 +61,7 @@ a:hover { text-decoration-color: var(--accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 155%;
+  width: 190%;
   max-width: none;
   height: auto;
   transform: translate(-49%, -61%);
@@ -78,49 +78,52 @@ h1 {
 .profile-affiliation a { color: var(--ink); text-decoration: none; }
 .profile-affiliation a:hover { text-decoration: underline; }
 .profile-links {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 9px;
+  gap: 10px;
   margin-top: 25px;
-  font-size: 16px;
+  padding-bottom: 24px;
 }
-.profile-links a { text-decoration: none; }
-.profile-links a:hover { text-decoration: underline; }
-.profile-links a span { margin-left: 3px; font-size: 14px; }
-#copy-email {
-  padding: 0;
-  border: 0;
+.profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--muted);
+  border-radius: 6px;
   background: none;
-  color: var(--accent);
+  color: var(--muted);
   font: inherit;
-  text-align: left;
-  overflow-wrap: anywhere;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
   cursor: pointer;
 }
-#copy-email:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+.profile-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(21, 95, 75, 0.04);
+}
+.profile-button svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+.email-control { position: relative; display: inline-flex; }
 .copied-note {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 6px);
   left: 0;
+  width: 100%;
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
   opacity: 0;
   pointer-events: none;
 }
 .copied-note.is-visible { animation: copied-fade 1.5s ease forwards; }
 @keyframes copied-fade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
-.profile-nav {
-  display: flex;
-  gap: 24px;
-  margin-top: 34px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  font-size: 15px;
-}
-.profile-nav a { color: var(--muted); text-decoration: none; }
-.profile-nav a:hover { color: var(--accent); text-decoration: underline; }
 main { min-width: 0; }
 .section-title {
   margin: 0 0 24px;
@@ -210,7 +213,7 @@ footer p { margin: 0; }
 @media (max-width: 1000px) {
   .site-shell { grid-template-columns: 210px minmax(0, 1fr); column-gap: 44px; width: calc(100% - 64px); padding-top: 48px; }
   h1 { font-size: 32px; }
-  .profile-role, .profile-affiliation, .profile-links { font-size: 15px; }
+  .profile-role, .profile-affiliation { font-size: 15px; }
 }
 @media (max-width: 740px) {
   html { scroll-padding-top: 28px; }
@@ -218,9 +221,10 @@ footer p { margin: 0; }
   .profile { position: static; display: grid; grid-template-columns: 148px minmax(0, 1fr); gap: 26px; align-items: center; margin-bottom: 37px; padding-bottom: 29px; border-bottom: 1px solid var(--line); }
   .profile-photo { margin: 0; }
   h1 { font-size: 30px; }
-  .profile-role, .profile-affiliation, .profile-links { font-size: 14px; }
-  .profile-links { margin-top: 15px; gap: 6px; }
-  .profile-nav { margin-top: 22px; padding-top: 12px; gap: 20px; font-size: 14px; }
+  .profile-role, .profile-affiliation { font-size: 14px; }
+  .profile-links { margin-top: 15px; gap: 8px; }
+  .profile-button { padding: 8px 10px; gap: 6px; font-size: 15px; }
+  .profile-button svg { width: 16px; height: 16px; }
   .section-title { font-size: 27px; margin-bottom: 19px; }
   .research { margin-top: 35px; }
   h4 { font-size: 20px; }
@@ -230,8 +234,6 @@ footer p { margin: 0; }
   .profile { grid-template-columns: 112px minmax(0, 1fr); gap: 20px; align-items: start; }
   h1 { font-size: 27px; }
   .profile-role { max-width: 170px; }
-  .profile-links { font-size: 13px; }
-  .profile-nav { margin-top: 18px; }
 }
 @media (max-width: 350px) {
   .profile { grid-template-columns: 92px minmax(0, 1fr); gap: 15px; }
@@ -246,7 +248,7 @@ footer p { margin: 0; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .site-shell { width: 100%; grid-template-columns: 160px minmax(0, 1fr); gap: 32px; padding-top: 0; }
   .profile { position: static; }
-  .profile-nav, .skip-link { display: none; }
+  .skip-link { display: none; }
   .section-title { font-size: 22pt; }
   h4 { font-size: 14pt; }
   .research-item { break-inside: avoid; }

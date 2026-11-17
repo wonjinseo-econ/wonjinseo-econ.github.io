@@ -63,14 +63,18 @@
         <p class="profile-role">Master’s student in Economics</p>
         <p class="profile-affiliation"><a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener" data-umami-event="click-yonsei">Yonsei University</a></p>
         <div class="profile-links">
-          <a href="files/CV/CV.pdf" data-umami-event="download-cv">Curriculum vitae <span aria-hidden="true">↗</span></a>
-          <button type="button" id="copy-email" data-email="wonjinspace@gmail.com" data-umami-event="click-email" aria-label="Copy email address: wonjinspace@gmail.com">wonjinspace@gmail.com</button>
-          <span class="copied-note" id="copied-note" role="status" aria-live="polite"></span>
+          <a class="profile-button" href="files/CV/CV.pdf" data-umami-event="download-cv" aria-label="View curriculum vitae">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5" fill="none" stroke="var(--paper)" stroke-width="1.5"/></svg>
+            <span>CV</span>
+          </a>
+          <div class="email-control">
+            <button class="profile-button" type="button" id="copy-email" data-email="wonjinspace@gmail.com" data-umami-event="click-email" aria-label="Copy email address: wonjinspace@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="1.5"/><path d="m3 5 9 7 9-7M3 19l6-6m6 0 6 6" fill="none" stroke="var(--paper)" stroke-width="1.5"/></svg>
+              <span>Email</span>
+            </button>
+            <span class="copied-note" id="copied-note" role="status" aria-live="polite"></span>
+          </div>
         </div>
-        <nav class="profile-nav" aria-label="Page sections">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-        </nav>
       </div>
     </aside>
 
