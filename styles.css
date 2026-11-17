@@ -152,7 +152,7 @@ h1 {
 .email-control { position: relative; display: inline-flex; }
 .copied-note {
   position: absolute;
-  bottom: 2px;
+  bottom: 4px;
   left: calc(100% + 8px);
   width: max-content;
   max-width: 44px;
