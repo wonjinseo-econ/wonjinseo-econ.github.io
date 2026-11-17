@@ -40,15 +40,16 @@ a:hover { text-decoration-color: var(--accent); }
 }
 .skip-link:focus { transform: translateY(0); }
 .site-shell {
+  --profile-top: 64px;
   display: grid;
   grid-template-columns: 244px minmax(0, 1fr);
   column-gap: 76px;
   align-items: start;
   width: min(calc(100% - 96px), var(--max-width));
   margin: 0 auto;
-  padding-top: 64px;
+  padding-top: var(--profile-top);
 }
-.profile { position: sticky; top: 48px; }
+.profile { position: sticky; top: var(--profile-top); }
 .profile-photo {
   position: relative;
   width: 100%;
@@ -211,7 +212,7 @@ footer {
 }
 footer p { margin: 0; }
 @media (max-width: 1000px) {
-  .site-shell { grid-template-columns: 210px minmax(0, 1fr); column-gap: 44px; width: calc(100% - 64px); padding-top: 48px; }
+  .site-shell { --profile-top: 48px; grid-template-columns: 210px minmax(0, 1fr); column-gap: 44px; width: calc(100% - 64px); }
   h1 { font-size: 32px; }
   .profile-role, .profile-affiliation { font-size: 15px; }
 }
