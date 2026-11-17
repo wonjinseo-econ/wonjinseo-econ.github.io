@@ -94,7 +94,7 @@ a:hover { text-decoration-color: var(--accent); }
 .profile-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 456 / 471;
   margin: 0 0 25px;
   overflow: hidden;
   background: var(--photo-background);
@@ -103,10 +103,10 @@ a:hover { text-decoration-color: var(--accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 210%;
+  width: 220%;
   max-width: none;
   height: auto;
-  transform: translate(-49%, -61%);
+  transform: translate(-47.5%, -62%);
 }
 h1 {
   margin: 0 0 9px;
@@ -123,7 +123,7 @@ h1 {
   align-items: flex-start;
   gap: 10px;
   margin-top: 20px;
-  margin-left: 6px;
+  margin-left: 0;
   padding-bottom: 24px;
 }
 .profile-button {
