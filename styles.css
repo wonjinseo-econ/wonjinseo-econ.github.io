@@ -106,7 +106,7 @@ a:hover { text-decoration-color: var(--accent); }
   width: 235%;
   max-width: none;
   height: auto;
-  transform: translate(-47.5%, -65%);
+  transform: translate(-47.5%, -63.5%);
 }
 h1 {
   margin: 0 0 9px;
@@ -152,14 +152,13 @@ h1 {
 .email-control { position: relative; display: inline-flex; }
 .copied-note {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: calc(100% + 8px);
   width: max-content;
   max-width: 44px;
-  transform: translateY(-50%);
   color: var(--muted);
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 1;
   text-align: left;
   overflow-wrap: anywhere;
   opacity: 0;
