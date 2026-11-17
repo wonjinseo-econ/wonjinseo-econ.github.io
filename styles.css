@@ -62,7 +62,7 @@ a:hover { text-decoration-color: var(--accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 190%;
+  width: 210%;
   max-width: none;
   height: auto;
   transform: translate(-49%, -61%);
@@ -170,7 +170,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 8px 20px;
+  gap: 8px 10px;
   margin-top: 9px;
   font-size: 15px;
   font-weight: 600;
