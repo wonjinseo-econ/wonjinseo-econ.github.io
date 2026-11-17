@@ -130,7 +130,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 36px;
+  min-height: 34px;
   padding: 6px 9px;
   border: 1.5px solid var(--muted);
   border-radius: 6px;
