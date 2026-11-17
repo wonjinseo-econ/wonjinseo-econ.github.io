@@ -94,7 +94,7 @@ a:hover { text-decoration-color: var(--accent); }
 .profile-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 456 / 471;
+  aspect-ratio: 4 / 5;
   margin: 0 0 25px;
   overflow: hidden;
   background: var(--photo-background);
@@ -103,10 +103,10 @@ a:hover { text-decoration-color: var(--accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 220%;
+  width: 235%;
   max-width: none;
   height: auto;
-  transform: translate(-47.5%, -62%);
+  transform: translate(-47.5%, -65%);
 }
 h1 {
   margin: 0 0 9px;
@@ -152,7 +152,7 @@ h1 {
 .email-control { position: relative; display: inline-flex; }
 .copied-note {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: calc(100% + 8px);
   width: max-content;
   max-width: 44px;
