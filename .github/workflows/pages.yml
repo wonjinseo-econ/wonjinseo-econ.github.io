@@ -27,10 +27,11 @@ jobs:
       # build, which is the loud failure we want.
       - name: Stage the files the site serves
         run: |
-          mkdir -p _site/files/CV
+          mkdir -p _site/files/CV _site/papers/fli
           cp index.html 404.html styles.css robots.txt sitemap.xml google5691fe2aaf6adc32.html 91887649597bc5afc4bddf938a4b2ab1.txt _site/
           cp files/wonjin.jpg files/wonjin-share.jpg files/Consumer_Inference_from_the_sponsored_label.pdf files/How_Does_Trade_Competition_with_a_Technological_Leader_Reshape_Domestic_Innovation.pdf _site/files/
           cp files/CV/CV.pdf _site/files/CV/
+          cp papers/fli/index.html _site/papers/fli/
           echo "--- staged ---"
           find _site -type f | sort
       - uses: actions/upload-pages-artifact@v5
